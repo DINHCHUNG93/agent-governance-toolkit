@@ -1,3 +1,70 @@
+
+Microsoft vừa mở mã nguồn Agent Governance Toolkit – một tín hiệu rất đáng chú ý cho làn sóng AI Agent trong doanh nghiệp.
+
+Nếu năm 2024–2025 là giai đoạn doanh nghiệp hào hứng thử nghiệm chatbot, copilot, workflow automation, thì từ 2026 trở đi, câu hỏi lớn hơn sẽ là: Làm sao để triển khai AI Agent thật sự vào vận hành mà không mất kiểm soát?
+
+Đó chính là vấn đề mà Agent Governance Toolkit của Microsoft đang nhắm tới.
+
+Hiểu đơn giản, đây là một bộ công cụ giúp doanh nghiệp quản trị AI Agent ở cấp độ sản xuất, bao gồm:
+1. Kiểm soát hành động của Agent
+Agent không chỉ trả lời văn bản. Nó có thể gọi API, gửi email, truy vấn cơ sở dữ liệu, chạy lệnh, gọi công cụ, thậm chí phối hợp với agent khác.
+
+Một agent có quyền truy cập database không có nghĩa là nó được phép xoá bảng dữ liệu.Một agent có quyền gửi email không có nghĩa là nó được tự động gửi mọi email ra ngoài.
+
+Toolkit này cho phép thiết lập policy rõ ràng: hành động nào được phép, hành động nào bị chặn, hành động nào cần phê duyệt.
+
+2. Định danh rõ agent nào đã làm gì?
+Trong hệ thống multi-agent, nếu có lỗi xảy ra mà chỉ nói “AI đã làm” thì không đủ.
+
+Doanh nghiệp cần biết:
+Agent nào thực hiện hành động đó?
+Nó dùng công cụ nào?
+Dựa trên policy nào?
+Vì sao hành động được cho phép hoặc bị từ chối?
+
+Đây là nền tảng quan trọng cho audit, bảo mật và truy vết trách nhiệm.
+
+3. Ghi log và tạo bằng chứng kiểm toán
+Một điểm rất đáng chú ý là toolkit này hướng đến việc tạo ra các bản ghi quyết định có tính “tamper-evident” – tức là có khả năng phát hiện nếu bị chỉnh sửa.
+
+Với các ngành như tài chính, bảo hiểm, y tế, chính phủ, sản xuất hoặc các hệ thống có dữ liệu nhạy cảm, đây không còn là tính năng phụ. Đây là điều kiện để AI Agent có thể đi vào vận hành thật.
+
+4. Không chỉ là prompt safety
+Một bài học lớn: không thể chỉ dặn AI bằng prompt kiểu “hãy tuân thủ quy định”.
+
+Prompt có thể bị quên, bị lách, bị prompt injection hoặc bị override bởi ngữ cảnh mới.
+
+Microsoft đang đưa ra một hướng tiếp cận thực tế hơn: Governance phải nằm ở tầng ứng dụng và hạ tầng, không chỉ nằm trong lời nhắc.
+
+Nói cách khác, AI Agent cần được quản trị giống như một “nhân sự số” có quyền hạn, vai trò, nhật ký hoạt động, vùng an toàn và cơ chế phê duyệt.
+
+5. Bao phủ nhiều lớp quản trị Agent
+Repo này không chỉ có một policy engine đơn giản. Nó còn đề cập đến nhiều thành phần như:
+- Agent OS: policy engine, vòng đời agent, governance gate
+- Agent Mesh: định danh, định tuyến và trust mesh giữa các agent
+- Agent Runtime: sandbox thực thi
+- Agent SRE: kill switch, giám sát SLO, chaos testing
+- Agent Compliance: kiểm tra OWASP, lint policy, integrity check
+- MCP Security Gateway: phát hiện tool poisoning, drift, hidden instruction
+- Shadow AI Discovery: phát hiện các agent chưa đăng ký trong hệ thống
+
+Điểm đáng chú ý là Microsoft cũng thiết kế khả năng tích hợp với nhiều ngôn ngữ và môi trường như Python, TypeScript, .NET, Rust, Go, Copilot CLI và Claude Code.
+
+Doanh nghiệp muốn triển khai AI Agent nghiêm túc sẽ phải đi qua 3 tầng:
+Tầng 1: Năng lực
+Agent biết làm việc, biết gọi công cụ, biết phối hợp.
+
+Tầng 2: Tích hợp
+Agent kết nối với dữ liệu, API, hệ thống nội bộ, quy trình vận hành.
+
+Tầng 3: Governance
+Agent được kiểm soát bằng policy, identity, audit log, sandbox, phê duyệt và giám sát.
+
+AI Agent càng thông minh, càng tự chủ, thì governance càng phải chặt.
+Và có lẽ trong vài năm tới, năng lực thiết kế “AI Agent Governance” sẽ trở thành một năng lực lõi của các tổ chức muốn triển khai AI ở quy mô lớn.
+
+
+
 🌍 [English](/README.md) | [日本語](./docs/i18n/README.ja.md) | [简体中文](./docs/i18n/README.zh-CN.md) | [한국어](./docs/i18n/README.ko.md)
 
 ![Agent Governance Toolkit](docs/assets/readme-banner.svg)
